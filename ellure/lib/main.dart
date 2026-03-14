@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import 'screens/home_screen.dart';
+import 'theme/app_theme.dart';
+import 'services/app_store.dart';
 
 void main() {
-  runApp(const EllureApp());
+  runApp(
+    ChangeNotifierProvider(create: (_) => AppStore(), child: const EllureApp()),
+  );
 }
 
 class EllureApp extends StatelessWidget {
@@ -13,10 +19,8 @@ class EllureApp extends StatelessWidget {
     return MaterialApp(
       title: 'Ellure',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.purple,
-      ),
-      home: HomeScreen(),
+      theme: AppTheme.theme,
+      home: HomeScreen(), // 👈 sem const
     );
   }
 }

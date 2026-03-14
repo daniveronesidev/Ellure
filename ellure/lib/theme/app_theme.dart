@@ -4,31 +4,28 @@ class AppTheme {
 
   static ThemeData theme = ThemeData(
 
-    scaffoldBackgroundColor: const Color(0xfff7f1ed),
-
     primaryColor: const Color(0xffe46b5c),
 
+    scaffoldBackgroundColor: const Color(0xfff8f5f2),
+
     appBarTheme: const AppBarTheme(
-      backgroundColor: Color(0xfff7f1ed),
+      backgroundColor: Colors.white,
       elevation: 0,
-      centerTitle: true,
+      iconTheme: IconThemeData(color: Colors.black),
       titleTextStyle: TextStyle(
-        color: Color(0xffe46b5c),
-        fontSize: 24,
+        color: Colors.black,
+        fontSize: 20,
         fontWeight: FontWeight.bold,
       ),
-      iconTheme: IconThemeData(
-        color: Color(0xffe46b5c),
-      ),
-    ),
-
-    cardTheme: const CardTheme(
-      elevation: 4,
     ),
 
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: const Color(0xffe46b5c),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 14,
+        ),
       ),
     ),
 

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../models/product.dart';
 import 'checkout_screen.dart';
+import 'package:provider/provider.dart';
+import '../services/app_store.dart';
 
 class ProductScreen extends StatelessWidget {
   final Product product;
@@ -39,11 +41,14 @@ class ProductScreen extends StatelessWidget {
             const SizedBox(height: 40),
 
             ElevatedButton(
-              child: const Text("Comprar agora"),
+              child: const Text("Adicionar ao carrinho"),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => const CheckoutScreen()),
+                context.read<AppStore>().addToCart(product);
+
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text("Produto adicionado ao carrinho"),
+                  ),
                 );
               },
             ),
