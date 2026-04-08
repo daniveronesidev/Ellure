@@ -1,17 +1,39 @@
-# ellure
+# 💄 Ellure
 
-A new Flutter project.
+Aplicativo mobile desenvolvido em Flutter com foco em experiência moderna, organização de produtos e interface elegante.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📱 Sobre o projeto
 
-A few resources to get you started if this is your first Flutter project:
+O **Ellure** é um aplicativo de e-commerce voltado para o segmento de beleza, com estrutura modular e escalável.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+O projeto foi desenvolvido com foco em:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Arquitetura limpa
+- Componentização de UI
+- Organização de código
+- Experiência do usuário
+
+---
+
+## 🚀 Tecnologias utilizadas
+
+- Flutter
+- Dart
+- Material Design
+- VSCode
+- Android Studio (emulador)
+
+---
+
+## 📂 Estrutura do projeto
+
+```bash
+lib/
+ ├── screens/        # Telas do app
+ ├── widgets/        # Componentes reutilizáveis
+ ├── services/       # Lógica e integração
+ ├── theme/          # Estilização global
+ ├── models/         # Modelos de dados
+ └── main.dart       # Ponto de entrada
